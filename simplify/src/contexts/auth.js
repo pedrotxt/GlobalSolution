@@ -24,7 +24,6 @@ function AuthProvider ({children}) {
                 telefone: getTelefone,
                 nome: getNome
             })
-            console.log(user)
         } else {
             alert('USUARIO NÃO ENCONTRADO')
         }
@@ -32,6 +31,7 @@ function AuthProvider ({children}) {
     }
 
     function signUp(nome, email, telefone, senha){
+
         let data = {
             nome: nome,
             email: email,
@@ -39,7 +39,7 @@ function AuthProvider ({children}) {
             senha: senha
         }
 
-        setUser({data});
+        setUser(data);
         localStorage.setItem('emailLocal', `${email}`)
         localStorage.setItem('senhaLocal', `${senha}`)
         localStorage.setItem('telefoneLocal',`${telefone}`)

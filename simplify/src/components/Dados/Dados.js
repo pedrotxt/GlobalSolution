@@ -1,18 +1,19 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import './Dados.css'
 import { AuthContext } from '../../contexts/auth'
 
 const Dados = () => {
-    const { user } = useContext(AuthContext)
+    const { user, getEmail, getNome, getTelefone } = useContext(AuthContext)
 
+    console.log(user)
     return (
         <div className='dados'>
             <div>
             <p>Editar</p>
             </div>
-            <h2>Nome: {user.nome}</h2>
-            <h2>Email: {user.email}</h2>
-            <h2>Telefone: {user.telefone}</h2>
+            <h2>Nome: {user}</h2>
+            <h2>Email: {getEmail}</h2>
+            <h2>Telefone: {getTelefone}</h2>
         </div>
     )
 }

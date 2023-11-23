@@ -7,7 +7,7 @@ const VerticalHeader = () => {
             <div className='opcoes'>
                 <a href='/admin'><h3>Dados</h3></a>
                 <a href='/admin/acompanhar'><h3>Acompanhar</h3></a>
-                <h3 >Gerar</h3>
+                <a href='/admin/novo'><h3 >Gerar</h3></a>
             </div>
             <a href='/login'><h3>Sair</h3></a>
         </div>

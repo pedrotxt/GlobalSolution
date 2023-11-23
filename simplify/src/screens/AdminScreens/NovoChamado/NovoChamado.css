@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+}
+
+.container .novo-chamado {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}

@@ -1,16 +1,16 @@
-.dados-container {
+.container {
     height: 100vh;
     display: flex;
 }
 
-.dados-container .dados-admin {
+.container .dados-admin {
     width: 65%;
     display: flex;
     flex-direction: column;
     margin: 90px 50px;
 }
 
-.dados-container .dados-admin .bem-vindo {
+.container .dados-admin .bem-vindo {
     color: #5263FA;
     font-size: 30px;
     margin-bottom: 80px;
