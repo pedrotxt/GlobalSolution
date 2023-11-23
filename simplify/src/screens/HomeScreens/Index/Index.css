@@ -1,0 +1,36 @@
+.index {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px;
+    align-items: center;
+    border-bottom: 1px solid #5263FA;
+}
+
+.infos {
+    margin: 00px 60px;
+}
+
+.index img {
+    height: 340px;
+}
+
+.index .infos h2 {
+    font-size: 45px;
+    color: #1b24bd;
+    margin-bottom: -5px;
+}
+
+.index .infos p {
+    font-size: 20px;
+}
+
+.index .infos .text-white{
+    color: #FFF;
+}
+
+.index:nth-child(3){
+    background-color: #5263FA;
+    color: #FFF; 
+    text-align: right;
+}
+

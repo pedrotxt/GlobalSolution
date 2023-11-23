@@ -1,0 +1,41 @@
+.plano {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    
+}
+
+.plano .opcoes {
+    display: flex;
+    margin: 50px 80px;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 45%;
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+.plano h1 {
+    color: #5263FA;
+    margin-bottom: -5px;
+}
+
+.plano h1:nth-child(1) {
+    margin-bottom: 100px;
+}
+
+.plano .opcoes h4 {
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 20px 100px;
+    display: inline-block;
+}
+
+.plano .opcoes h4:hover {
+    background-color: #5263FA;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+}

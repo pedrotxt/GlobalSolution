@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    height: 65px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.header a img{
+    height: 69px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.header .opcoes{
+    display: flex;
+}
+
+.header .opcoes a{
+    font-size: 16px;
+    margin: 0 30px;
+    text-decoration: none;
+    color: #000;
+}
+
+.header .opcoes a:hover{
+    color: #1B24BD;
+}

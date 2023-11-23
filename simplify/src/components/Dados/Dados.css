@@ -1,0 +1,18 @@
+.dados {
+    border: 1px solid #000;
+    padding: 35px;
+    width: 100%;
+    border-radius: 25px;
+    position: relative;
+}
+
+.dados h2 {
+    padding: 15px;
+}
+
+.dados p {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    cursor: pointer;
+}
