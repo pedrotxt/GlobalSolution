@@ -1,0 +1,30 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.login-area {
+    width: 70%;
+}
+
+.login-area form {
+    border-radius: 50px;
+    margin: 80px 0px;
+}
+
+.login-area form input{
+    width: 50%;
+    height: 30px;
+    text-align: center;
+    background-color: #DDD;
+    margin-top: 10px;
+    font-size: 20px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+}
+
+.h3-btn {
+    margin-bottom: -10px;
+}

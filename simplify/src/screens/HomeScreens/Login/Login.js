@@ -1,13 +1,15 @@
 import { useState, useContext } from 'react'
 import './Login.css'
 import { AuthContext } from '../../../contexts/auth'; 
+import Botao from '../../../components/Botao/Botao';
+import Header from '../../../components/Header/Header';
 
 const Login = () => {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
-    const { signIn, signed } = useContext(AuthContext)
+    const { signIn } = useContext(AuthContext)
 
     function handleSignIn(e){
         e.preventDefault();
@@ -19,11 +21,13 @@ const Login = () => {
     }
 
     return (
+        <>
+        <Header />
         <div className='login'>
-            <div className='login-area'></div>
+            <div className='login-area'>
 
             <form onSubmit={handleSignIn}>
-                <h1>Entrar</h1>
+                <h1>Login</h1>
                 <input 
                     type="text"
                     placeholder="email@email.com"
@@ -37,9 +41,19 @@ const Login = () => {
                     onChange={ (e) => setSenha(e.target.value)}
                 />
 
-                <input type='submit'></input>
+                <Botao type='submit'>
+                    Entrar
+                </Botao>
             </form>
+            </div>
+
+            <h3 className='h3-btn'>Não tem conta?</h3>
+            <a href='/cadastro'>
+            <Botao>Cadastre-se</Botao>
+            </a>
+            
         </div>
+        </>
     )
 }
 

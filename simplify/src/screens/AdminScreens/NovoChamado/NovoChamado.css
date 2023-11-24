@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    
 }
 
 .container .novo-chamado {
@@ -7,10 +8,73 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+   
 }
 
-form div {
+.container-chamados {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
+
+table {
+    border: 1px solid #CCC;
+    padding: 0px;
+    width: 90%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+table tr {
+    background-color: #F8F8F8;
+    border: 1px solid #DDD;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+form {
+    border: 1px solid #CCC;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form .div-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-size: 30px;
+    width: 100%;
+}
+
+form .div-form select {
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    background-color: #DDD;
+    margin-top: 10px;
+    font-size: 20px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+}
+
+form .div-form textarea {
+    width: 80%;
+    height: 80px;
+    font-size: 15px;
+}
+

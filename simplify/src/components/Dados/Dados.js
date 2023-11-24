@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import './Dados.css'
 import { AuthContext } from '../../contexts/auth'
 

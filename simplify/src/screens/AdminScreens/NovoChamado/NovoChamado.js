@@ -1,14 +1,14 @@
+import Botao from '../../../components/Botao/Botao'
 import VerticalHeader from '../../../components/VerticalHeader/VerticalHeader'
 import './NovoChamado.css'
 import { useState } from 'react'
 
-const NovoChamado = (props) => {
+const NovoChamado = () => {
     
     const [doutor, setDoutor] = useState('')
     const [assunto, setAssunto] = useState('')
     const [complemento, setComplemento] = useState('')
 
-    let chamados = {};
     const [chamado, setChamado] = useState([])
 
     function handleChangeSelectDoutor(e){
@@ -37,25 +37,28 @@ const NovoChamado = (props) => {
     return (
         <div className='container'>
         <VerticalHeader />
+        <div className='container-chamados'>
         <div className='novo-chamado'>
             <form onSubmit={handleRegister}>
-                <div>
+                <div className='div-form'>
                 <label>Doutores</label>
                 <select value={doutor} onChange={handleChangeSelectDoutor}>
+                    <option>Selecione</option>
                     <option value="Doutor Manhatan">Doutor Manhatan</option>
                     <option value="Doutora Kelly">Doutora Kelly</option>
                 </select>
                 </div>
 
-                <div>
+                <div className='div-form'>
                 <label>Assunto da Consulta</label>
                 <select value={assunto} onChange={handleChangeSelectAssunto}>
+                    <option>Selecione</option>
                     <option value="Consulta Psiquiatra">Consulta Psiquiatra</option>
                     <option value="Consulta Psicologa">Consulta Psicologa</option>
                 </select>
                 </div>
 
-                <div>
+                <div className='div-form'>
                 <label>Complemento</label>
                 <textarea 
                     type="text"
@@ -66,22 +69,34 @@ const NovoChamado = (props) => {
                 </div>
                 
 
-                <button type='submit'>Registrar</button>
+                <Botao type='submit'>Registrar</Botao>
             </form>
+            </div>
 
+            <div className='container-chamados'>
+                <h1>Consultas</h1>
             {chamado.map((chamado, index) => {
                 
                 return (    
-                <div key={index}>
-                <label >Chamados</label>
-                <h1>Doutor</h1>
-                <h3>{chamado.doutor}</h3>
-                <h1>Assunto</h1>
-                <h3>{chamado.assunto}</h3>
-                <h1>Complemento</h1>
-                <p>{chamado.complemento}</p>
-            </div> 
+                    <table className='chamados' key={index}>
+                        <thead>
+                            <tr>
+                                <th>Doutor</th>
+                                <th>Assunto</th>
+                                <th>Complemento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Doutor">{chamado.doutor}</td>
+                                <td data-label="Assunto">{chamado.assunto}</td>
+                                <td data-label="Complemento">{chamado.complemento}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+         
             )})}
+            </div>
         </div>
         </div>
         

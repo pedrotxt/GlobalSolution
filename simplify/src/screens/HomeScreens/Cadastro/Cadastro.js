@@ -1,6 +1,8 @@
 import { useState, useContext } from 'react'
 import './Cadastro.css'
 import { AuthContext } from '../../../contexts/auth';
+import Botao from '../../../components/Botao/Botao';
+import Header from '../../../components/Header/Header';
 
 const Cadastro = () => {
     
@@ -20,8 +22,11 @@ const Cadastro = () => {
     }
 
     return (
+        <>
+        <Header />
         <div className='cadastro'>
-            <div className='cadastro-area'></div>
+            
+            <div className='cadastro-area'>
             <form onSubmit={handleSubmit}>
                 <h1>Cadastrar</h1>
                 <input 
@@ -51,9 +56,19 @@ const Cadastro = () => {
                     onChange={ (e) => setSenha(e.target.value)}
                 />
 
-                <input type='submit'></input>
+                <Botao type='submit'>
+                    Cadastrar
+                </Botao>
+                
             </form>
+            </div>
+
+            <h3 className='h3-btn'>Tem conta?</h3>
+            <a href='/login'>
+            <Botao>Logar-se</Botao>
+            </a>
         </div>
+        </>
     )
 }
 
