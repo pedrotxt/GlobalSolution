@@ -30,3 +30,7 @@
     justify-content: space-around;
     height: 50%;
 }
+
+.sair {
+    cursor: pointer;
+}

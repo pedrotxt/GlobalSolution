@@ -14,11 +14,11 @@ function App() {
   return (
     <BrowserRouter>
      <AuthProvider>
-     <Routes>
+     <Routes> 
         <Route path="/" element={<Index/>}/>
         <Route path="/servicos" element={<Plan/>}/>
-        <Route path="/admin" element={<DadosAdmin/>}/>
-        <Route path="/admin/novo" element={<NovoChamado/>}/>
+        <Route path="/admin" element={<Private><DadosAdmin/></Private>}/>
+        <Route path="/admin/novo" element={<Private><NovoChamado/></Private>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/cadastro" element={<Cadastro/>}/>
       </Routes>

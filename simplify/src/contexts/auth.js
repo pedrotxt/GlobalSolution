@@ -8,26 +8,24 @@ function AuthProvider ({children}) {
 
     const navigate = useNavigate();
 
-    const getEmail = localStorage.getItem("emailLocal")
-    const getSenha = localStorage.getItem("senhaLocal")
-    const getTelefone = localStorage.getItem("telefoneLocal")
-    const getNome = localStorage.getItem("nomeLocal")
+    const usuarioLocal = localStorage.getItem("usuario");
+    let usuarioObj = JSON.parse(usuarioLocal);
 
+    console.log(usuarioObj)
     function signIn(email, senha){
         
-        if(getEmail === email && getSenha === senha){
+        if(usuarioObj.email === email && usuarioObj.senha === senha){
             alert('LOGADO COM SUCESSO')
             navigate("/admin")
             setUser({
-                email: getEmail,
-                senha: getSenha,
-                telefone: getTelefone,
-                nome: getNome
+                email: usuarioObj.email,
+                senha: usuarioObj.senha,
+                telefone: usuarioObj.telefone,
+                nome: usuarioObj.nome
             })
         } else {
             alert('USUARIO NÃO ENCONTRADO')
         }
-
     }
 
     function signUp(nome, email, telefone, senha){
@@ -40,11 +38,7 @@ function AuthProvider ({children}) {
         }
 
         setUser(data);
-        localStorage.setItem('emailLocal', `${email}`)
-        localStorage.setItem('senhaLocal', `${senha}`)
-        localStorage.setItem('telefoneLocal',`${telefone}`)
-        localStorage.setItem('nomeLocal', `${nome}`)
-        console.log(user)
+        localStorage.setItem('usuario', JSON.stringify(data))
 
         navigate("/admin")
     }
@@ -52,10 +46,11 @@ function AuthProvider ({children}) {
     return (
         <AuthContext.Provider
             value={{
-                signed: !!user,
+                signed: !!usuarioObj,
                 user,
                 signIn,
-                signUp
+                signUp,
+                usuarioObj
             }}>
             {children}
         </AuthContext.Provider>

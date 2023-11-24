@@ -6,14 +6,14 @@ import AuthProvider, { AuthContext } from '../../../contexts/auth'
 
 const DadosAdmin = () => {
 
-    const { user, getEmail, getNome, getTelefone } = useContext(AuthContext)
-    console.log(user)
+    const { usuarioObj } = useContext(AuthContext)
+    
     return (
         <>
         <div className='container'>
             <VerticalHeader />
             <div className='dados-admin'>
-                <h3 className='bem-vindo' >Seja bem vindo {user}</h3>
+                <h3 className='bem-vindo' >Seja bem vindo {usuarioObj.nome}</h3>
                 <Dados />
             </div>
         </div>
